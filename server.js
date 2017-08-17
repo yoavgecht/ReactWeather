@@ -5,16 +5,9 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 
-app.use(function(req, res, next){
-    if(req.headers['x-forwarded-proto'] == 'http'){
-        next();
-    } else{
-        res.redirect('https://' + req.hostname + req.url);
-    }
-});
-
 app.get('*', (req, res) => {
-	res.redirect(__dirname + '/public/index.html');
+    console.log(__dirname + '/public/index.html');
+	res.sendFile(__dirname + '/public/index.html');
 });
 
 app.listen(PORT, function(){
