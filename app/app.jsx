@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 const history = createBrowserHistory();
 
+//Load foundation
+require ('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
+window.$(document).foundation();
 
 import Main from 'Main';
 import Weather from 'Weather';
