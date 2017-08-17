@@ -14,7 +14,7 @@ app.use(function(req, res, next){
 });
 
 app.get('*', (req, res) => {
-	res.sendFile(__dirname + '/public/index.html');
+	res.redirect(__dirname + '/public/index.html');
 });
 
 app.listen(PORT, function(){
