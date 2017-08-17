@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack; node server.js --history-api-fallback"
+    "start": "node server.js"
   },
   "author": "Yoav Gecht",
   "license": "MIT",
